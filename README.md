@@ -1,6 +1,11 @@
 # 俺的野球解説（仮）
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hiroshima-arc/orecomme.git)
 
+```bash
+npm install
+npm start
+```
+
 ## 概要
 
 ### 目的
