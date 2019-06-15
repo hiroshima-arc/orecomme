@@ -1,7 +1,9 @@
 type Comment @model {
   id: ID!
   name: String!
+  inning: Int
   player: String
+  profile_number: Int
   comment: String
   point: Int
 }

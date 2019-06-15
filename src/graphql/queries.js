@@ -5,7 +5,9 @@ export const getComment = `query GetComment($id: ID!) {
   getComment(id: $id) {
     id
     name
+    inning
     player
+    profile_number
     comment
     point
   }
@@ -20,7 +22,9 @@ export const listComments = `query ListComments(
     items {
       id
       name
+      inning
       player
+      profile_number
       comment
       point
     }

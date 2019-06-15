@@ -16,6 +16,7 @@ module.exports = {
   },
 
   devServer: {
+    host: '0.0.0.0',
     contentBase: "dist",
     open: true
   },
@@ -82,6 +83,8 @@ module.exports = {
     new CopyPlugin([
       { from: 'src/css', to: 'css' },
       { from: 'src/img', to: 'img' },
+      { from: 'src/favicon', to: 'favicon' },
+      { from: 'src/javascript/liquidFillGauge.js', to: 'javascript/liquidFillGauge.js' },
       { from: 'src/vendor', to: 'vendor' }
     ]),
     new CleanWebpackPlugin()

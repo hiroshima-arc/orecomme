@@ -21,7 +21,9 @@ export const queryWithParams = async params => {
 export const mutation = async params => {
   const commentDetails = {
     name: params.name,
+    inning: params.inning,
     player: params.player,
+    profile_number: params.profileNumber,
     comment: params.comment,
     point: params.point
   };
@@ -37,11 +39,40 @@ export const mutation = async params => {
 export const subscribe = () => {
   // Subscribe to creation of Todo
   const subscription = API.graphql(
-    graphqlOperation(subscriptions.onCreateTodo)
+    graphqlOperation(subscriptions.onCreateComment)
   ).subscribe({
-    next: todoData => console.log(todoData)
+    next: commentData => {
+      console.log(commentData);
+
+      // Update chart.
+      gauge1.update(commentData.value.data.onCreateComment.point * 20);
+      chart.data.datasets[0].data.push(
+        commentData.value.data.onCreateComment.point
+      );
+      chart.update();
+
+      // Update message.
+      const player = commentData.value.data.onCreateComment.player;
+      const comment = commentData.value.data.onCreateComment.comment;
+      const profileNumber =
+        commentData.value.data.onCreateComment.profile_number;
+      const messageChild = `<div class="line__left">
+                  <figure>
+                    <img src="/img/player/${profileNumber}.jpg" />
+                  </figure>
+                  <div class="line__left-text">
+                    <div class="name">${player}</div>
+                    <div class="text">
+                      ${comment}
+                    </div>
+                  </div>
+                </div>`;
+      const messageParent = document.getElementById("LineMessages");
+      console.log(messageParent);
+      messageParent.innerHTML = messageParent.innerHTML + messageChild;
+    }
   });
 
   // Stop receiving data updates from the subscription
-  subscription.unsubscribe();
+  //subscription.unsubscribe();
 };

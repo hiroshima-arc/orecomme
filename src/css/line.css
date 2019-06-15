@@ -28,8 +28,8 @@
 }
 
 .line__container .scroll {
-  height: 500px;
-  overflow-y: scroll;
+  /* height: 500px; */
+  /* overflow-y: scroll; */
 }
 
 /* スタンプ画像最大幅 */
@@ -60,12 +60,12 @@
 /* 正方形を用意 */
 .line__container .line__left figure img {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .line__container .line__left .line__left-text {
-  margin-left: 70px;
+  margin-left: 55px;
 }
 
 .line__container .line__left .line__left-text .name {

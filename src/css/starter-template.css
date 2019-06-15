@@ -1,16 +1,28 @@
 body {
   padding-top: 5rem;
+  background-color: #f1f1f2;
 }
+
 main.container {
   width: 400px;
 }
+
+div.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
 .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
 }
 
 .field .row {
-  height: 360px;
+  height: 300px;
 }
 
 .field {

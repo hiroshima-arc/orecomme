@@ -9,15 +9,25 @@ export const commentPage = () => {
   }
 
   const commentSendEvent = () => {
-    const mutation = (user, player, comment, point) => {
-      const params = {name:user,player:player,comment:comment,point:point};
+    const mutation = (user, inning, player, profileNumber,comment, point) => {
+      const params = {
+        name:user,
+        inning:inning,
+        player:player,
+        profileNumber:profileNumber,
+        comment:comment,
+        point:point
+      };
+      console.log(JSON.stringify(params));
       graphql.mutation(params);
     };
 
+    const inning = document.getElementById("input-inning").value;
     const player = document.getElementById("select-player").value;
+    const profileNumber = document.getElementById("input-profile-number").value;
     const comment = document.getElementById("input-comment").value;
     const point = document.getElementById("select-point").value;
-    auth.currentUser((user) => {mutation(user,player,comment,point)});
+    auth.currentUser((user) => {mutation(user,inning,player,profileNumber, comment,point)});
     //graphql.mutation();
   };
 

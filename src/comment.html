@@ -109,6 +109,13 @@
         <h1>コメント入力画面</h1>
         <form>
           <div class="form-group">
+            <label for="">イニング</label>
+            <input
+              type="inning"
+              class="form-control"
+              id="input-inning"
+              placeholder="1"
+            />
             <label for="">選手名</label>
             <select class="form-control form-control-sm" id="select-player">
               <option></option>
@@ -116,6 +123,13 @@
               <option>長野</option>
               <option>堂林</option>
             </select>
+            <label for="">背番号</label>
+            <input
+              type="profile-number"
+              class="form-control"
+              id="input-profile-number"
+              placeholder="1"
+            />
             <label for="">コメント</label>
             <input
               type="comment"
@@ -145,13 +159,13 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
-      /** JS：Area */</script
-    ><style>
+      /** JS：Area */
+    </script>
+    <style>
       /** CSS：Area */
     </style>
 
     <div id="dev">
-      <div id="mocha"></div>
       <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
       <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
