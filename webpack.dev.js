@@ -75,6 +75,10 @@ module.exports = {
       template: "./src/service.html",
       filename: "service.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/comment.html",
+      filename: "comment.html"
+    }),
     new CopyPlugin([
       { from: 'src/css', to: 'css' },
       { from: 'src/img', to: 'img' },

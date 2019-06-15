@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "orecomme",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authorecomme4ab58b9a",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

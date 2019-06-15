@@ -1,4 +1,4 @@
-const { apiCall } = require("../api");
+//const { apiCall } = require("../api");
 //const graphql = require("../graphql");
 //const appsync = require("../appsync");
 //const storage = require("../storage");
@@ -11,7 +11,7 @@ export const servicePage = () => {
   }
 
   if (document.getElementById("service")) {
-    apiCall();
+    //apiCall();
     //graphql.query();
     //graphql.queryWithParams({id: "1"});
     //graphql.mutation();

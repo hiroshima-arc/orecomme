@@ -71,6 +71,10 @@ module.exports = {
       template: "./src/service.html",
       filename: "service.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/comment.html",
+      filename: "comment.html"
+    }),
     new MiniCssExtractPlugin({
       filename: "./contents.css",
       chunkFilename: "[id].css"

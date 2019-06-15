@@ -1,0 +1,7 @@
+type Comment @model {
+  id: ID!
+  name: String!
+  player: String
+  comment: String
+  point: Int
+}

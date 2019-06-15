@@ -80,6 +80,12 @@ npx amplify add analytics
 npx amplify push
 ```
 
+APIセットアップ
+```bash
+npx amplify add api
+npx amplify push
+```
+
 **[⬆ back to top](#構成)**
 
 ### 運用

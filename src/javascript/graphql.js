@@ -5,25 +5,29 @@ import * as subscriptions from "../graphql/subscriptions";
 
 // Simple query
 export const query = async () => {
-  const allTodos = await API.graphql(graphqlOperation(queries.listTodos));
-  console.log(allTodos);
+  const allComments = await API.graphql(graphqlOperation(queries.listComments));
+  console.log(allComments);
 };
 
 // Query using a parameter
 export const queryWithParams = async params => {
-  const oneTodo = await API.graphql(graphqlOperation(queries.getTodo, params));
-  console.log(oneTodo);
+  const oneComment = await API.graphql(
+    graphqlOperation(queries.getComment, params)
+  );
+  console.log(oneComment);
 };
 
 // Mutation
-export const mutation = async () => {
-  const todoDetails = {
-    name: "Todo 1",
-    description: "Learn AWS AppSync"
+export const mutation = async params => {
+  const commentDetails = {
+    name: params.name,
+    player: params.player,
+    comment: params.comment,
+    point: params.point
   };
 
   const newTodo = await API.graphql(
-    graphqlOperation(mutations.createTodo, { input: todoDetails })
+    graphqlOperation(mutations.createComment, { input: commentDetails })
   );
   console.log(newTodo);
 };
