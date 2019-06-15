@@ -4,7 +4,23 @@
   "description": "## 概要",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nf start -j Procfile",
+    "app:frontend": "browser-sync start --config bs-config.js",
+    "app:webpack": "webpack-dev-server --hot --inline --config webpack.dev.js",
+    "build": "npm-run-all build:*",
+    "build:webpack": "webpack --config webpack.prod.js",
+    "test": "npm-run-all test:*",
+    "watch": "npm-run-all watch:*",
+    "watch:webpack": "webpack --watch",
+    "watch:frontend": "watch 'npm-run-all format:frontend:*' ./src ",
+    "format": "npm-run-all format:**",
+    "format:frontend:js": "prettier --write src/**/*.js",
+    "format:frontend:css": "prettier --write src/**/*.css",
+    "format:frontend:html": "prettier --write src/**/*.html",
+    "lint": "npm-run-all lint:*",
+    "lint:frontend": "eslint src/**/*.js --fix",
+    "aws:amplify:publish": "amplify publish",
+    "aws:amplify:status": "amplify status"
   },
   "repository": {
     "type": "git",
@@ -18,11 +34,13 @@
   },
   "homepage": "https://github.com/hiroshima-arc/orecomme#readme",
   "devDependencies": {
+    "@aws-amplify/cli": "^1.7.3",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
+    "aws-amplify": "^1.1.28",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.4",
