@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Landing Page - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="vendor/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="/javascript/liquidFillGauge.js" language="JavaScript"></script>
+    <style>
+      .liquidFillGaugeText {
+        font-family: Helvetica;
+        font-weight: bold;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: "line",
+
+        // The data for our dataset
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July"
+          ],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "rgb(255, 99, 132)",
+              borderColor: "rgb(255, 99, 132)",
+              data: [0, 10, 5, 2, 20, 30, 45]
+            }
+          ]
+        },
+
+        // Configuration options go here
+        options: {}
+      });
+    </script>
+  </head>
+
+  <body>
+    <canvas id="myChart"></canvas>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">オレ的野球解説（仮）</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdown01"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Dropdown</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            id="signin-user"
+            class="form-control mr-sm-2"
+            type="text"
+            readonly
+          />
+          <button
+            id="sign-out"
+            class="btn btn-primary my-2 my-sm-0"
+            type="button"
+          >
+            Sign out
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container" id="service">
+      <!--
+      <div class="starter-template">
+        <h1>オレ的野球解説（仮）</h1>
+        <img width="600" height="1000" src="../img/mockup.png"></img>
+      </div>
+      -->
+      <div class="row justify-content-center">
+        <div class="col-3">
+          Gauge
+          <svg
+            id="fillgauge1"
+            width="97%"
+            height="250"
+            onclick="gauge1.update(NewValue());"
+          ></svg>
+        </div>
+        <div class="col-9">グラフ</div>
+      </div>
+      <div class="row">
+        <div class="py-4">
+          球場イメ-ジ
+        </div>
+      </div>
+    </main>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      /** JS：Area */</script
+    ><style>
+      /** CSS：Area */
+    </style>
+
+    <div id="dev">
+      <div id="mocha"></div>
+      <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
+      <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+
+      <script>
+        mocha.setup("bdd");
+        const assert = chai.assert;
+
+        describe("Test Service", () => {
+          it("Hello world", () => {
+            assert.equal("hello, world", greeting());
+          });
+        });
+
+        function greeting() {
+          return "hello, world";
+        }
+      </script>
+
+      <script></script>
+
+      <script>
+        //mocha.checkLeaks();
+        mocha.globals(["jQuery"]);
+        mocha.run();
+      </script>
+    </div>
+  </body>
+</html>

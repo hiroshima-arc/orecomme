@@ -32,12 +32,23 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="css/starter-template.css" rel="stylesheet" />
+    <link href="/css/starter-template.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/line.css" type="text/css" media="all" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="/javascript/liquidFillGauge.js" language="JavaScript"></script>
+    <style>
+      .liquidFillGaugeText {
+        font-family: Helvetica;
+        font-weight: bold;
+      }
+    </style>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">オレ的野球解説（仮）</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -52,23 +63,6 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
-          </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -77,12 +71,18 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              >Dropdown</a
+              >解説者</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#"
+                ><input type="checkbox" />&nbsp&nbsp田中 やすなり</a
+              >
+              <a class="dropdown-item" href="#"
+                ><input type="checkbox" />&nbsp&nbsp広島 たろう</a
+              >
+              <a class="dropdown-item" href="#"
+                ><input type="checkbox" />&nbsp&nbsp安佐 みなみ</a
+              >
             </div>
           </li>
         </ul>
@@ -105,56 +105,91 @@
     </nav>
 
     <main role="main" class="container" id="service">
+      <!--
       <div class="starter-template">
-        <h1>FizzBuzz Service</h1>
-        <p class="lead">
-          1 から 100 までの数をプリントするプログラムを書け。<br />
-          ただし 3 の倍数のときは数の代わりに｢Fizz｣とプリントし、<br />
-          5 の倍数のときは｢Buzz｣とプリントし、<br />
-          3 と 5 両方の倍数の場合には｢FizzBuzz｣とプリントすること。
-        </p>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              <th>4</th>
-              <th>5</th>
-              <th>6</th>
-              <th>7</th>
-              <th>8</th>
-              <th>9</th>
-              <th>10</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>Fizz</td>
-              <td>4</td>
-              <td>Buzz</td>
-              <td>Fizz</td>
-              <td>7</td>
-              <td>8</td>
-              <td>Fizz</td>
-              <td>Buzz</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>Fizz</td>
-              <td>13</td>
-              <td>14</td>
-              <td>FizzBuzz</td>
-              <td>16</td>
-              <td>17</td>
-              <td>Fizz</td>
-              <td>19</td>
-              <td>Buzz</td>
-            </tr>
-          </tbody>
-        </table>
+        <h1>オレ的野球解説（仮）</h1>
+        <img width="600" height="1000" src="../img/mockup.png"></img>
+      </div>
+      -->
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <svg
+            id="fillgauge1"
+            width="97%"
+            onclick="gauge1.update(NewValue());"
+          ></svg>
+        </div>
+        <div class="col-8">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="field">
+        <div class="row">
+          <div class="col-12 field">
+            <div class="player1">
+              <img src="img/player/14.jpg" />
+            </div>
+            <div class="player2">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player3">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player4">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player5">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player6">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player7">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player8">
+              <img src="img/player.jpg" />
+            </div>
+            <div class="player9">
+              <img src="img/player.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- ▼LINE風ここから -->
+          <div class="line__container">
+            <!-- ▼会話エリア scrollを外すと高さ固定解除 -->
+            <div class="line__contents scroll">
+              <!-- 相手の吹き出し -->
+              <div class="line__left">
+                <figure>
+                  <img src="/img/player.jpg" />
+                </figure>
+                <div class="line__left-text">
+                  <div class="name">大瀬良</div>
+                  <div class="text">
+                    前の球は内角ストレートだから、次は決め球の外のスライダーかなー
+                  </div>
+                </div>
+              </div>
+
+              <!-- 相手の吹き出し -->
+              <div class="line__left">
+                <figure>
+                  <img src="/img/player.jpg" />
+                </figure>
+                <div class="line__left-text">
+                  <div class="name">菊池</div>
+                  <div class="text">今、右によったね。流し警戒かな</div>
+                </div>
+              </div>
+            </div>
+            <!--　▲会話エリア ここまで -->
+          </div>
+          <!--　▲LINE風ここまで -->
+        </div>
       </div>
     </main>
     <!-- /.container -->
@@ -163,13 +198,13 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
-      /** JS：Area */</script
-    ><style>
+      /** JS：Area */
+    </script>
+    <style>
       /** CSS：Area */
     </style>
 
     <div id="dev">
-      <div id="mocha"></div>
       <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
       <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
@@ -195,6 +230,73 @@
         //mocha.checkLeaks();
         mocha.globals(["jQuery"]);
         mocha.run();
+      </script>
+
+      <script type="text/javascript">
+        var config1 = liquidFillGaugeDefaultSettings();
+        config1.circleColor = "#FF7777";
+        config1.textColor = "#FF4444";
+        config1.waveTextColor = "#FFAAAA";
+        config1.waveColor = "#FFDDDD";
+        config1.circleThickness = 0.1;
+        config1.textVertPosition = 0.2;
+        config1.waveAnimateTime = 1000;
+        config1.waveHeight = 0.2;
+        loadLiquidFillGauge("fillgauge1", 78, config1);
+
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var chart = new Chart(ctx, {
+          // The type of chart we want to create
+          type: "line",
+
+          // The data for our dataset
+          data: {
+            labels: [
+              "1回",
+              "2回",
+              "3回",
+              "4回",
+              "5回",
+              "6回",
+              "7回",
+              "8回",
+              "9回"
+            ],
+            datasets: [
+              {
+                //label: "熱狂度",
+                backgroundColor: "rgb(255, 99, 132)",
+                borderColor: "rgb(255, 99, 132)",
+                data: [2, 1, 5, 1, 5, 1, 2]
+              }
+            ]
+          },
+
+          // Configuration options go here
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+              display: false
+            },
+            scales: {
+              yAxes: [
+                {
+                  display: false,
+                  stacked: false,
+                  gridLines: {
+                    display: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 6
+                  }
+                }
+              ]
+            }
+          }
+        });
       </script>
     </div>
   </body>
