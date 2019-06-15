@@ -1,0 +1,20 @@
+{
+    "appName": "orecomme",
+    "roleName": "pinpointLambdaRole1a38123c",
+    "cloudWatchPolicyName": "cloudWatchPolicy1a38123c",
+    "pinpointPolicyName": "pinpointPolicy1a38123c",
+    "authPolicyName": "pinpoint_amplify_1a38123c",
+    "unauthPolicyName": "pinpoint_amplify_1a38123c",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

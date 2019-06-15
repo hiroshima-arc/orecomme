@@ -1,4 +1,5 @@
 # 俺的野球解説（仮）
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hiroshima-arc/orecomme.git)
 
 ## 概要
 
@@ -55,6 +56,24 @@ npx amplify init
 **[⬆ back to top](#構成)**
 
 ### 配置
+
+Webサイトセットアップ
+```bash
+npx amplify add hosting
+npx amplify publish
+```
+
+認証セットアップ
+```bash
+npx amplify add auth
+npx amplify push
+```
+
+分析セットアップ
+```bash
+npx amplify add analytics
+npx amplify push
+```
 
 **[⬆ back to top](#構成)**
 

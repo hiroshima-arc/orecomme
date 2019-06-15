@@ -9,6 +9,11 @@
             "UnauthRoleName": "orecomme-develop-20190615121922-unauthRole",
             "StackName": "orecomme-develop-20190615121922",
             "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/orecomme-develop-20190615121922/5f38b940-8f1c-11e9-8071-0ec110ab8a1e"
+        },
+        "categories": {
+            "auth": {
+                "orecomme4ab58b9a": {}
+            }
         }
     }
 }

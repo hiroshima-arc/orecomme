@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Landing Page - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="vendor/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdown01"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Dropdown</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            id="signin-user"
+            class="form-control mr-sm-2"
+            type="text"
+            readonly
+          />
+          <button
+            id="sign-out"
+            class="btn btn-primary my-2 my-sm-0"
+            type="button"
+          >
+            Sign out
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container" id="service">
+      <div class="starter-template">
+        <h1>FizzBuzz Service</h1>
+        <p class="lead">
+          1 から 100 までの数をプリントするプログラムを書け。<br />
+          ただし 3 の倍数のときは数の代わりに｢Fizz｣とプリントし、<br />
+          5 の倍数のときは｢Buzz｣とプリントし、<br />
+          3 と 5 両方の倍数の場合には｢FizzBuzz｣とプリントすること。
+        </p>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>10</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>Fizz</td>
+              <td>4</td>
+              <td>Buzz</td>
+              <td>Fizz</td>
+              <td>7</td>
+              <td>8</td>
+              <td>Fizz</td>
+              <td>Buzz</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Fizz</td>
+              <td>13</td>
+              <td>14</td>
+              <td>FizzBuzz</td>
+              <td>16</td>
+              <td>17</td>
+              <td>Fizz</td>
+              <td>19</td>
+              <td>Buzz</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      /** JS：Area */</script
+    ><style>
+      /** CSS：Area */
+    </style>
+
+    <div id="dev">
+      <div id="mocha"></div>
+      <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
+      <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+
+      <script>
+        mocha.setup("bdd");
+        const assert = chai.assert;
+
+        describe("Test Service", () => {
+          it("Hello world", () => {
+            assert.equal("hello, world", greeting());
+          });
+        });
+
+        function greeting() {
+          return "hello, world";
+        }
+      </script>
+
+      <script></script>
+
+      <script>
+        //mocha.checkLeaks();
+        mocha.globals(["jQuery"]);
+        mocha.run();
+      </script>
+    </div>
+  </body>
+</html>
