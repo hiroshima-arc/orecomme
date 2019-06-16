@@ -15,5 +15,22 @@
                 "orecomme4ab58b9a": {}
             }
         }
+    },
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "orecomme-production-20190616125647-authRole",
+            "UnauthRoleArn": "arn:aws:iam::411087959999:role/orecomme-production-20190616125647-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::411087959999:role/orecomme-production-20190616125647-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "orecomme-production-20190616125647-deployment",
+            "UnauthRoleName": "orecomme-production-20190616125647-unauthRole",
+            "StackName": "orecomme-production-20190616125647",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/orecomme-production-20190616125647/c3a6ab70-8fea-11e9-a8ef-0a534bae3094"
+        },
+        "categories": {
+            "auth": {
+                "orecomme4ab58b9a": {}
+            }
+        }
     }
 }

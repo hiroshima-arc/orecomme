@@ -8,6 +8,8 @@ npm start
 
 ## 概要
 
+![](docs/%20ArchitectureDiagram.png)
+
 ### 目的
 
 ### 前提
