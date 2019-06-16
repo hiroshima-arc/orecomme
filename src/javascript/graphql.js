@@ -56,19 +56,19 @@ export const subscribe = () => {
       const comment = commentData.value.data.onCreateComment.comment;
       const profileNumber =
         commentData.value.data.onCreateComment.profile_number;
+      const watcherCode = "tanaka";
       const messageChild = `<div class="line__left">
                   <figure>
-                    <img src="/img/player/${profileNumber}.jpg" />
+                    <img src="/img/watcher/${watcherCode}.jpg" />
                   </figure>
                   <div class="line__left-text">
-                    <div class="name">${player}</div>
                     <div class="text">
+                      <figure class="player"><img src="/img/player/${profileNumber}.jpg" /></figure>
                       ${comment}
                     </div>
                   </div>
                 </div>`;
       const messageParent = document.getElementById("LineMessages");
-      console.log(messageParent);
       messageParent.innerHTML = messageParent.innerHTML + messageChild;
     }
   });

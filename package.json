@@ -19,8 +19,9 @@
     "format:frontend:html": "prettier --write src/**/*.html",
     "lint": "npm-run-all lint:*",
     "lint:frontend": "eslint src/**/*.js --fix",
-    "aws:amplify:publish": "amplify publish",
-    "aws:amplify:status": "amplify status"
+    "aws:amp:push": "amplify push",
+    "aws:amp:pub": "amplify publish",
+    "aws:amp:stat": "amplify status"
   },
   "repository": {
     "type": "git",

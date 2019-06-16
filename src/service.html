@@ -103,12 +103,17 @@
                 ><input type="checkbox" checked />&nbsp&nbsp田中 やすなり</a
               >
               <a class="dropdown-item" href="#"
-                ><input type="checkbox" />&nbsp&nbsp広島 たろう</a
+                ><input type="checkbox" />&nbsp&nbsp林 しょうへい</a
               >
               <a class="dropdown-item" href="#"
                 ><input type="checkbox" />&nbsp&nbsp安佐 みなみ</a
               >
             </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./comment.html"
+              >解説する<span class="sr-only"></span
+            ></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -139,11 +144,7 @@
       <div class="topwrap card">
         <div class="row justify-content-center">
           <div class="col-4">
-            <svg
-              id="fillgauge1"
-              width="97%"
-              onclick="gauge1.update(NewValue());"
-            ></svg>
+            <svg id="fillgauge1" width="97%"></svg>
           </div>
           <div class="col-8">
             <canvas id="myChart"></canvas>
@@ -241,29 +242,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
       <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
 
-      <script>
-        mocha.setup("bdd");
-        const assert = chai.assert;
-
-        describe("Test Service", () => {
-          it("Hello world", () => {
-            assert.equal("hello, world", greeting());
-          });
-        });
-
-        function greeting() {
-          return "hello, world";
-        }
-      </script>
-
-      <script></script>
-
-      <script>
-        //mocha.checkLeaks();
-        mocha.globals(["jQuery"]);
-        mocha.run();
-      </script>
-
       <script type="text/javascript">
         var config1 = liquidFillGaugeDefaultSettings();
         config1.circleColor = "#FF7777";
@@ -273,7 +251,6 @@
         config1.circleThickness = 0.1;
         config1.textVertPosition = 0.2;
         config1.waveAnimateTime = 1000;
-        config1.waveHeight = 0.2;
         var gauge1 = loadLiquidFillGauge("fillgauge1", 0, config1);
 
         var ctx = document.getElementById("myChart").getContext("2d");
@@ -283,22 +260,12 @@
 
           // The data for our dataset
           data: {
-            labels: [
-              "1回",
-              "2回",
-              "3回",
-              "4回",
-              "5回",
-              "6回",
-              "7回",
-              "8回",
-              "9回"
-            ],
+            labels: ["", "", "", "", "", "", "", "", ""],
             datasets: [
               {
                 //label: "熱狂度",
-                backgroundColor: "rgb(255, 99, 132)",
-                borderColor: "rgb(255, 99, 132)",
+                backgroundColor: "rgb(255, 119, 119)",
+                borderColor: "rgb(255, 119, 119)",
                 data: []
               }
             ]
