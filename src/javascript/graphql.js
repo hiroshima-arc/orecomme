@@ -72,6 +72,14 @@ export const subscribe = () => {
                 </div>`;
       const messageParent = document.getElementById("LineMessages");
       messageParent.innerHTML = messageParent.innerHTML + messageChild;
+
+      const imgs = document.getElementsByClassName("player__check");
+      for (let i = 0; i < imgs.length; ++i) {
+        imgs[i].style.display = "block";
+        setTimeout(function() {
+          imgs[i].style.display = "none";
+        }, 2000);
+      }
     }
   });
 

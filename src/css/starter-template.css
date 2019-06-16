@@ -36,6 +36,10 @@ div.row {
   border-radius: 50%;
 }
 
+.player img.player__check {
+  top: 14px;
+}
+
 .player1 img {
   position: absolute;
   left: 45%;
