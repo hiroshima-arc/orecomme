@@ -4,9 +4,11 @@ import * as mutations from "../graphql/mutations";
 import * as subscriptions from "../graphql/subscriptions";
 
 // Simple query
-export const query = async () => {
-  const allComments = await API.graphql(graphqlOperation(queries.listComments));
-  console.log(allComments);
+export const query = async params => {
+  const allComments = await API.graphql(
+    graphqlOperation(queries.listComments, params)
+  );
+  return allComments;
 };
 
 // Query using a parameter
