@@ -24,11 +24,24 @@ export const commentPage = () => {
 
     const inning = document.getElementById("input-inning").value;
     const player = document.getElementById("select-player").value;
-    const profileNumber = document.getElementById("input-profile-number").value;
+    const profileNumber = document.getElementById("select-profile-number").value;
     const comment = document.getElementById("input-comment").value;
     const point = document.getElementById("select-point").value;
-    auth.currentUser((user) => {mutation(user,inning,player,profileNumber, comment,point)});
-    //graphql.mutation();
+    
+    if(inning === "") return alert('イニング未入力です');
+    if(player === "") return alert('選手名が未入力です');
+    if(profileNumber === "") return alert('背番号が未入力です');
+    if(comment === "") return alert('コメントが未入力です');
+    
+    auth.currentUser((user) => {
+      mutation(
+        user,
+        inning,
+        player,
+        profileNumber, 
+        comment,point
+        )
+    });
   };
 
   if (document.getElementById("comment")) {
