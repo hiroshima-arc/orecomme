@@ -23,7 +23,7 @@ export const commentPage = () => {
     };
 
     const inning = document.getElementById("input-inning").value;
-    const player = document.getElementById("select-player").value;
+    const player = "DUMMY";
     const profileNumber = document.getElementById("select-profile-number").value;
     const comment = document.getElementById("input-comment").value;
     const point = document.getElementById("select-point").value;

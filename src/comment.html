@@ -88,13 +88,6 @@
               id="input-inning"
               placeholder="1"
             />
-            <label for="">選手名</label>
-            <select class="form-control form-control-sm" id="select-player">
-              <option></option>
-              <option>大瀬良</option>
-              <option>長野</option>
-              <option>堂林</option>
-            </select>
             <label for="">背番号</label>
             <select class="form-control form-control-sm" id="select-profile-number">
             </select>
@@ -130,16 +123,10 @@
     function apiCall(url, method) {
       function renderResult(data) {
         console.log(data);
-        document.querySelector('#message').innerHTML = data;
-        Object.values(data).forEach(k => {
-          console.log(k);
+        let items = "<option></option>";
+        Object.values(data).forEach(value => {
+          items += "<option>" + value + "</options>";
         })
-        const items = `
-              <option></option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              `;
         document.querySelector('#select-profile-number').innerHTML = items;
       }
 
