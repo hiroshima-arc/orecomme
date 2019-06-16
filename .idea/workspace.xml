@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="570a192e-2ad0-4e62-bdb8-58620c4e5892" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/hosting/S3AndCloudFront/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/hosting/S3AndCloudFront/template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ ArchitectureDiagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ ArchitectureDiagram.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphql/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ ArchitectureDiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ ArchitectureDiagram.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,17 +21,22 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="210">
-                <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <first_editor relative-caret-position="441">
+                <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/ ArchitectureDiagram.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -52,6 +54,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release/v0.1.0" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,7 +86,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="963" />
-    <option name="y" value="23" />
+    <option name="y" value="26" />
     <option name="width" value="957" />
     <option name="height" value="1177" />
   </component>
@@ -99,6 +106,11 @@
               <item name="orecomme" type="b2602c69:ProjectViewProjectNode" />
               <item name="orecomme" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="orecomme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="orecomme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,7 +191,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.aws:amplify:publish" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -229,13 +243,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15508000" />
+    <option name="totallyTimeSpent" value="20491000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="963" y="23" width="957" height="1177" extended-state="0" />
-    <editor active="true" />
+    <frame x="963" y="26" width="957" height="1177" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25520262" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25520262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="aws.explorer" order="3" side_tool="true" />
@@ -249,12 +262,12 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="GraphQL" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.42337918" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.42337918" />
       <window_info anchor="bottom" id="Docker" order="9" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32907662" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32907662" />
       <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="bottom" id="Floobits" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -331,18 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1016">
-          <caret line="113" column="39" lean-forward="true" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2790" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/forget.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -361,13 +362,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/amplify/backend/backend-config.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amplify/backend/amplify-meta.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.prod.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -487,15 +481,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/amplify/team-provider-info.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amplify/backend/amplify-meta.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amplify/backend/hosting/S3AndCloudFront/template.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <first_editor relative-caret-position="441">
+            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ ArchitectureDiagram.drawio">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ ArchitectureDiagram.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
