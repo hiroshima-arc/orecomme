@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>オレ的野球解説</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -89,7 +89,10 @@
               placeholder="1"
             />
             <label for="">背番号</label>
-            <select class="form-control form-control-sm" id="select-profile-number">
+            <select
+              class="form-control form-control-sm"
+              id="select-profile-number"
+            >
             </select>
             <label for="">コメント</label>
             <input
@@ -120,38 +123,32 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
-    function apiCall(url, method) {
-      function renderResult(data) {
-        let items = "<option></option>";
-        Object.values(data).forEach(value => {
-          items += "<option>" + value + "</options>";
+      function apiCall(url, method) {
+        function renderResult(data) {
+          let items = "<option></option>";
+          Object.values(data).forEach(value => {
+            items += "<option>" + value + "</options>";
+          });
+          document.querySelector("#select-profile-number").innerHTML = items;
+        }
+
+        $.ajax({
+          url: url,
+          type: method,
+          data: {}
         })
-        document.querySelector('#select-profile-number').innerHTML = items;
+          .done(data => {
+            $("#message").html(data);
+            renderResult(data);
+          })
+          .fail(data => {
+            $("#message").html(data);
+            renderResult(data);
+          })
+          .always(data => {});
       }
 
-      $.ajax({
-        url: url,
-        type: method,
-        data: {}
-      })
-              .done((data) => {
-                $('#message').html(data);
-                renderResult(data);
-              })
-              .fail((data) => {
-                $('#message').html(data);
-                renderResult(data);
-              })
-              .always((data) => {
-              });
-    }
-    
-    apiCall('https://starting-api.herokuapp.com/', 'GET')
+      apiCall("https://starting-api.herokuapp.com/", "GET");
     </script>
-    <style>
-      /** CSS：Area */
-    </style>
-
-    </div>
   </body>
 </html>
