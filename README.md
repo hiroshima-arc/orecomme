@@ -1,4 +1,6 @@
 # 俺的野球解説
+
+## Quick Start
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hiroshima-arc/orecomme.git)
 
 ```bash
@@ -7,10 +9,28 @@ npm start
 ```
 
 ## 概要
+### ビジネス
 
+[ビジネスモデルキャンバス](https://canvanizer.com/canvas/whtBG2GTUwcHZ)
+
+### アーキテクチャ
 ![](docs/%20ArchitectureDiagram.png)
 
 ### 目的
+野球を見てるとヒマなときがありませんか？
+
+せっかく球場に行っているのに投手戦でヒマだなっと思うときはありませんか？
+
+でも、そう感じているのはあなただけかも知れません。
+
+この瞬間に駆け引きを楽しんでいる人がいるかも知れません。
+
+あなたは重要なところを見落としているかも知れません。
+
+そんなあなたに気づきを与えます！
+
+野球を楽しむための気づきを与えます！！
+
 
 ### 前提
 
