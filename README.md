@@ -1,4 +1,4 @@
-# 俺的野球解説（仮）
+# 俺的野球解説
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hiroshima-arc/orecomme.git)
 
 ```bash
@@ -28,6 +28,8 @@ npm start
 ## 詳細
 
 ### 構築
+
+以下の作業は実施済みなので開発者は実行する必要ありません
 
 #### 開発パッケージのセットアップ
 
@@ -91,6 +93,11 @@ npx amplify push
 **[⬆ back to top](#構成)**
 
 ### 運用
+
+アプリケーションのデプロイ
+```bash
+npx amplify publish
+```
 
 **[⬆ back to top](#構成)**
 
